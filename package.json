@@ -1,0 +1,14 @@
+{
+  "name": "2019-tallercomenzarproyecto",
+  "version": "0.0.1",
+  "description": "Este es un taller de como comenzar proyectos de front-end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Fabián Alexis Bravo Abarca",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}
