@@ -10,7 +10,7 @@ const miOtraFunctionTesteable = () => {
 
 // Importante agregar la función que se conectará con el dom desde javascript
 // O no funcionará
-if( document ) {
+if( document.getElementById('miBoton') ) {
   document.getElementById('miBoton').addEventListener('click', miFuncionTesteable);
 }
 
