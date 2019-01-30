@@ -1,7 +1,10 @@
-export const miFuncionTesteable = () => {
+const miFuncionTesteable = () => {
   return true;
 };
 
-export const miOtraFunctionTesteable = () => {
+const miOtraFunctionTesteable = () => {
   return false;
 };
+
+export const miFuncionTesteableExp = miFuncionTesteable;
+export const miOtraFunctionTesteableExp = miOtraFunctionTesteable;
