@@ -1,12 +1,12 @@
 {
   "name": "2019-tallercomenzarproyecto",
   "version": "0.0.1",
-  "description": "Este es un taller de como comenzar proyectos de front-end.",
+  "description": "Accidents DATALOVERS.",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
   },
-  "author": "Fabián Alexis Bravo Abarca",
+  "author": "Scarlett Burboa Garate",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.3.1",
