@@ -1,10 +1,184 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>g</title>
+    <meta charset="utf-8" />
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Public Estadistics - Accidents in the USA</title>
+    <meta
+      name="Description"
+      content="Public statistics on accidents that occurred by means of transportation in the USA"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.transportation.gov/sites/dot.gov/themes/dot_wide/favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Quicksand:400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
   <body>
-    <button id="miBoton">Un botón botonoso</button>
-    <!-- importante poner sus scripts al final del archivo -->
-    <script src="js/app.js" type="module"></script>
+    <div class="row">
+      <!-- uncomment code for absolute positioning tweek see top comment in css -->
+      <!-- <div class="absolute-wrapper"> </div> -->
+      <!-- Menu -->
+      <div class="side-menu">
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <div class="brand-wrapper">
+              <!-- Hamburger -->
+              <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <!-- Brand -->
+              <div class="brand-name-wrapper">
+                <a class="navbar-brand" href="#">
+                  Data of Accidents
+                </a>
+              </div>
+
+              <!-- Search -->
+              <a data-toggle="collapse" href="#search" class="btn btn-default" id="search-trigger">
+                <span class="glyphicon glyphicon-search"></span>
+              </a>
+
+              <!-- Search body -->
+              <div id="search" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <form class="navbar-form" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Buscar" />
+                    </div>
+                    <button type="submit" class="btn btn-default ">
+                      <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Menu -->
+          <div class="side-menu-container">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#"><i class="fas fa-ship"></i> Acuatics Accidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-plane"></i> Air Accidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-walking"></i> Pedestrian Accidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-road"></i> Highway Accidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-people-carry"></i> Employee Accidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-train"></i> Raylway Accidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-exclamation-triangle"></i> Others Acdidents</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-car-crash"></i> Private Vehicles Accidents</a>
+              </li>
+
+              <!-- 
+              <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-lvl1">
+                  <span class="glyphicon glyphicon-user"></span> Sub Level
+                  <span class="caret"></span>
+                </a>
+                <div id="dropdown-lvl1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="panel panel-default" id="dropdown">
+                        <a data-toggle="collapse" href="#dropdown-lvl2">
+                          <span class="glyphicon glyphicon-off"></span> Sub Level
+                          <span class="caret"></span>
+                        </a>
+                        <div id="dropdown-lvl2" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="#"><span class="glyphicon glyphicon-signal"></span> Link</a>
+              </li> -->
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="">
+        <div class="side-body">
+          <section class="section-begin">
+            <div class="logo">
+              <img
+                src="https://www.transportation.gov/sites/dot.gov/themes/dot/images/logo.png"
+                alt="logo Departament of transports EEUU"
+                srcset=""
+              />
+            </div>
+            <p>
+              DATA OF ACCIDENTS IN EE.UU<br />
+              <span>1960 to 2016</span>
+            </p>
+          </section>
+          <div class="container">
+            <select name="year" id="year"
+              ></select
+            >
+            <select name="accidents" id="accidents"
+              ></select
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/chart.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/data.js"></script>
   </body>
 </html>
